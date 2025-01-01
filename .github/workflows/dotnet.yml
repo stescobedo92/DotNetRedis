@@ -27,14 +27,3 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: Check Redis Connection
-      run: |
-        # Wait for Redis to be healthy
-        while ! redis-cli ping; do
-          sleep 1
-          echo "Waiting for Redis..."
-        done
-        echo "Redis is up and running!"
-        # You can add more tests here that interact with Redis
-        redis-cli set testkey "Hello from GitHub Actions!"
-        redis-cli get testkey
