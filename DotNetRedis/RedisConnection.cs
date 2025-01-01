@@ -5,7 +5,7 @@ namespace DotNetRedis;
 public class RedisConnection
 {
     private static readonly Lazy<ConnectionMultiplexer> _lazyConnection;
-    private static ConnectionMultiplexer Connection => _lazyConnection.Value;
+    public static ConnectionMultiplexer Connection => _lazyConnection.Value;
     
     static RedisConnection()
     {
