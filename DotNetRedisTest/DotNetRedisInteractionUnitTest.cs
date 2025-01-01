@@ -7,7 +7,7 @@ public class DotNetRedisInteractionUnitTest
 
     public DotNetRedisInteractionUnitTest()
     {
-        var connection = ConnectionMultiplexer.Connect("localhost"); // Replace with your Redis connection string
+        var connection = ConnectionMultiplexer.Connect("localhost");
         _redisDb = connection.GetDatabase();
     }
 
