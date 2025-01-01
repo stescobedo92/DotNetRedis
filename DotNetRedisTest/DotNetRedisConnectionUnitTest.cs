@@ -3,7 +3,7 @@ using StackExchange.Redis;
 
 namespace DotNetRedisTest;
 
-public class DotnetRedisUnitTest
+public class DotNetRedisConnectionUnitTest
 {
     [Fact]
     public void Connection_ShouldNotBeNull()
